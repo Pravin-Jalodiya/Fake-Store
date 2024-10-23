@@ -1,0 +1,22 @@
+<p-card class="card">
+  <ng-template pTemplate="header">
+    <div class="card-elements">
+      <div class="product-image-size">
+        <img class="product-img" [src]="image()" alt="Product image"/>
+      </div>
+      <span></span>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="body">
+    <div class="product-info">
+      <div class="card-elements product-title">{{ title() }}</div>
+      <div class="card-elements product-price">{{ price() | DollarToRupees }}</div>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <div class="product-actions" *appHasRole="'USER'">
+        <p-button label="Edit" (click)="onEdit()" icon="pi pi-pencil" severity="info"></p-button>
+        <p-button label="Delete" (click)="onDelete()" icon="pi pi-trash" severity="danger"></p-button>
+    </div>
+  </ng-template>
+</p-card>

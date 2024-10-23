@@ -1,0 +1,42 @@
+<div class="form-container">
+  <h2>{{ productToEdit ? 'Edit Product' : 'Add Product' }}</h2>
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+
+    <label for="title">Title*:</label>
+    <input id="title" formControlName="title" type="text" pInputText required (focus)="clearError('title')" />
+    @if (productForm.get('title')?.invalid && (submitted || productForm.get('title')?.touched)) {
+      <div class="error-message">Title is required.</div>
+    }
+
+    <label for="price">Price*:</label>
+    <input id="price" formControlName="price" type="number" pInputText (focus)="clearError('price')" />
+    @if (productForm.get('price')?.invalid && (submitted || productForm.get('price')?.touched)) {
+      <div class="error-message">Price is required and must be a positive number.</div>
+    }
+
+    <label for="description">Description*:</label>
+    <textarea id="description" 
+              formControlName="description" 
+              pInputTextarea (focus)="clearError('description')">
+    </textarea>
+    @if (productForm.get('description')?.invalid && (submitted || productForm.get('description')?.touched)) {
+      <div class="error-message">Description is required.</div>
+    }
+
+    <label for="categoryId">Category ID*:</label>
+    <input id="categoryId" formControlName="categoryId" type="number" pInputText (focus)="clearError('categoryId')" />
+    @if (productForm.get('categoryId')?.invalid && (submitted || productForm.get('categoryId')?.touched)) {
+      <div class="error-message">Category ID is required.</div>
+    }
+
+    <label for="images">Images* (comma-separated URLs):</label>
+    <input id="images" formControlName="images" type="text" pInputText (focus)="clearError('images')" />
+    @if (productForm.get('images')?.invalid && (submitted || productForm.get('images')?.touched)) {
+      <div class="error-message">Images are required.</div>
+    }
+
+    <div class="button-container">
+      <p-button label="Submit" type="submit" [disabled]="!this.productForm.valid" severity="danger"></p-button>
+    </div>
+  </form>
+</div>

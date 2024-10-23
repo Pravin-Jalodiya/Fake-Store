@@ -1,0 +1,91 @@
+.form-container {
+  max-width: 400px;
+  margin: 16px auto; /* Reduced margin */
+  padding: 24px; /* Reduced padding */
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  font-family: 'Arial', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 16px; /* Reduced margin */
+  color: #333;
+  font-size: 26px; /* Slightly smaller font size */
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px; /* Reduced margin */
+  font-weight: 600;
+  color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 12px; /* Reduced padding */
+  margin-bottom: 12px; /* Reduced margin */
+  border: 1px solid #d1d1d1;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea {
+  height: 80px; /* Reduced height */
+  resize: none;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.button-container {
+  margin-top: 16px; /* Reduced margin */
+  text-align: center;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 16px; /* Reduced padding */
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: #e74c3c;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 16px; /* Further reduced padding for small screens */
+  }
+
+  h2 {
+    font-size: 24px; /* Adjusted font size */
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

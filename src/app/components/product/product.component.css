@@ -1,0 +1,114 @@
+.card {
+  flex-basis: 20%;
+  background: linear-gradient(135deg, #e3d4e5, #dcdcdc);
+  margin: 1%;
+  height: auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-elements {
+  margin-bottom: 8px;
+  height: auto;
+  text-align: center;
+}
+
+.product-image-size {
+  min-width: 250px;
+  min-height: 250px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.placeholder {
+  width: auto;
+  height: auto;
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 16px;
+}
+
+.card-elements.product-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  width: auto;
+  height: 60px;
+  margin: 20px;
+  padding: 8px;
+}
+
+.card-elements.product-price {
+  color: #777;
+  width: auto;
+  padding: 5px;
+  margin: 15px;
+  height: 30px;
+}
+
+.product-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.product-actions {
+  display: flex;
+  height: auto;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.product-actions .btn {
+  flex: 1;
+  margin: 0 4px;
+  padding: 8px;
+  height: auto;
+}
+
+.button {
+  display: flex;
+  justify-content: space-between;
+  height: auto;
+}
+
+.button button {
+  background-color: #8c7e8c;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 5px;
+  height: auto;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button button:hover {
+  background-color: #7a6c7a;
+}
+
+#delete {
+  background-color: #d94343;
+}
+
+#delete:hover {
+  background-color: #c03939;
+}
