@@ -14,7 +14,7 @@
     </div>
   </ng-template>
   <ng-template pTemplate="footer">
-    <div class="product-actions" *appHasRole="'USER'">
+    <div class="product-actions" *appHasRole>
         <p-button label="Edit" (click)="onEdit()" icon="pi pi-pencil" severity="info"></p-button>
         <p-button label="Delete" (click)="onDelete()" icon="pi pi-trash" severity="danger"></p-button>
     </div>

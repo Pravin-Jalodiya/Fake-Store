@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="header-actions">
   <div>
-  <p-button routerLink="/add" class="add-button">Add Product</p-button>
+  <p-button routerLink="/add" class="add-button" *appHasRole>Add Product</p-button>
   <p-button class="change-role-btn" (click)="changeRole()">Change User</p-button>
   <span class="active-role">{{ this.storeService.activeRole() }}</span>
   </div>

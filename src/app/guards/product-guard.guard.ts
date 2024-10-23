@@ -14,4 +14,4 @@ export const productGuard: CanActivateFn = (route : ActivatedRouteSnapshot, stat
     console.log("guard")
     return true;
   }
-};
+}
