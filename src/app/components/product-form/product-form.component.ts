@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 
 import { StoreService } from '../../shared/service/products.service';
 import { NewProduct, Product } from '../../shared/models/models';
+import {InputTextareaModule} from "primeng/inputtextarea";
+import {InputTextModule} from "primeng/inputtext";
+import {Button} from "primeng/button";
 
 @Component({
   selector: 'app-product-form',
   templateUrl: './product-form.component.html',
-  styleUrls: ['./product-form.component.css']
+  styleUrls: ['./product-form.component.css'],
+  imports: [
+    ReactiveFormsModule,
+    InputTextareaModule,
+    InputTextModule,
+    Button
+  ],
+  standalone: true
 })
 
 export class ProductFormComponent implements OnInit {

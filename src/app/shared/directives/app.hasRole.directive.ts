@@ -2,7 +2,8 @@ import { Directive, Input, TemplateRef, ViewContainerRef, inject, OnInit, OnChan
 import { StoreService } from '../service/products.service';
 
 @Directive({
-  selector: '[appHasRole]'
+  selector: '[appHasRole]',
+  standalone:  true
 })
 export class HasRoleDirective implements OnInit, DoCheck {
   private hasView = false;

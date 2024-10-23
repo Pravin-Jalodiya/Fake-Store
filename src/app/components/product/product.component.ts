@@ -1,16 +1,28 @@
 import { Component,input, inject, EventEmitter, Output } from '@angular/core';
 import { Router } from '@angular/router'
 
-import { ConfirmationService } from 'primeng/api';
+import {ConfirmationService, PrimeTemplate} from 'primeng/api';
 
 import { StoreService } from '../../shared/service/products.service';
 import { CONFIRMATION_DIALOG, CONFIRMATION_HEADER } from '../../shared/config/app.constants';
+import {Button} from "primeng/button";
+import {CardModule} from "primeng/card";
+import {CustomPipe} from "../../shared/pipes/dollarToRupees.pipe";
+import {HasRoleDirective} from "../../shared/directives/app.hasRole.directive";
 
 
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrl: './product.component.css'
+  styleUrl: './product.component.css',
+  imports: [
+    Button,
+    PrimeTemplate,
+    CardModule,
+    CustomPipe,
+    HasRoleDirective
+  ],
+  standalone: true
 })
 
 export class ProductComponent {
@@ -47,7 +59,7 @@ export class ProductComponent {
     });
   }
 }
-  onEdit() { 
+  onEdit() {
      this.router.navigate(['/update', this.productId()])
   }
 }
